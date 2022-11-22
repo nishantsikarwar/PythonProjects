@@ -47,7 +47,7 @@ In the end, I am sorting the indices list and found the intersection of f_classi
 **Reshaping the data as an image:** 
  As of now, we have tabular data with 64 features. We need to convert it as images like this:
 
-![alt text]([images/Screenshot 2022-11-22 at 00.58.50.png](https://github.com/nishantsikarwar/PythonProjects/blob/main/images/Screenshot%202022-11-22%20at%2000.58.50.png))
+![alt text](https://github.com/nishantsikarwar/PythonProjects/blob/main/images/Screenshot%202022-11-22%20at%2000.58.50.png))
  
 **Handling Class Imbalance:** 
 The labelling algorithm presented in the paper produces a somewhat generous number of buy/sell instances as analogous to class 0 | class 1. Any other real-world strategy would produce much fewer instances.
@@ -59,7 +59,7 @@ This is less for the model to learn anything significant. The paper mentions onl
 
 This array of sample weights is then passed to Keras ‘fit’ function. You can also look into the ‘class_weights’ parameter.
 
-![alt text]([images/Screenshot 2022-11-22 at 01.02.13.png](https://github.com/nishantsikarwar/PythonProjects/blob/main/images/Screenshot%202022-11-22%20at%2001.02.13.png))
+![alt text](https://github.com/nishantsikarwar/PythonProjects/blob/main/images/Screenshot%202022-11-22%20at%2001.02.13.png)
 
 **Training:**  
 The model architecture mentioned in the paper had some missing points. For example, they didn’t mention the strides they had used.  I had no luck with sliding window training, no matter how small a network I used. So I trained with full training data with cross-validation (fifth deviation). But I have included the code for sliding/rolling window training in the project. So, I used a very similar model with small differences like dropouts etc. This is the model I trained with (I have not tried extensive hyper-parameter tuning):
